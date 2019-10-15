@@ -24,7 +24,7 @@ public class Connect4 {
 			System.out.print("Player " + player + ", enter number 1-9: ");
 			int colIndex = scanner.nextInt();
 			
-			if (colIndex < 1 || colIndex > 9) {
+			while (colIndex < 1 || colIndex > 9) {
 				System.out.print("Player " + player + ", enter number 1-9: ");
 				colIndex = scanner.nextInt();
 			}
@@ -48,6 +48,7 @@ public class Connect4 {
 			
 		}
 		
+		scanner.close();
 		System.out.println("Congratulations player " + player + ", you won!");
 		displayBoard();
 	}
